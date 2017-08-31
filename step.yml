@@ -1,0 +1,39 @@
+title: "S3 Download"
+summary: This step allows to install a pkg file
+description: |-
+   This step allows to install a pkg file on the system.
+website: https://github.com/FutureWorkshops/bitrise-step-install-pkg 
+source_code_url: https://github.com/FutureWorkshops/bitrise-step-install-pkg 
+host_os_tags:
+  - osx-10.10
+  - osx-10.9
+project_type_tags:
+  - ios
+  - xamarin
+type_tags:
+  - pkg
+  - mac
+is_requires_admin_user: true
+is_always_run: false
+is_skippable: false
+run_if: ""
+inputs:
+  - pkg_path: ''
+    opts:
+      title: "PKG Path"
+      summary: The local path to the pkg file to install.
+      description: ""
+      is_expand: true
+      is_required: true
+      value_options: []
+  - verbose: 'false'
+    opts:
+      title: "Verbose"
+      summary: The verbosity level of the installer
+      description: ""
+      is_expand: true
+      is_required: true
+      value_options: [ "true", "false" ]
+
+outputs:
+ 
